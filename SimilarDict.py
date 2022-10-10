@@ -9,7 +9,7 @@ import pickle
 import numpy as np
 
 class SimilarDict:
-    def __init__(self, threshold = 0.5):        
+    def __init__(self, threshold = 0.69):        
         with open('similar_dict_glove.6B.300d.pickle', 'rb') as handle:
             self.W, self.vocab, self.ivocab = pickle.load(handle)
             self.threshold = threshold
