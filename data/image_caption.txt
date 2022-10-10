@@ -2,9 +2,9 @@ working_1.jpg	A person using a laptop in the office
 eating_1.jpg	A person eats a banana in front of a laptop
 washing_1.jpg	A person washes his face in the sink
 cycling_1.jpg	A person riding a bike on a clear sky
-bus_1.jpg Someone is waiting at the bus stop
+bus_1.jpg	Someone is waiting at the bus stop
 working_2.jpg	A person using a laptop in the office
 eating_2.jpg	A person eats a banana in front of a laptop
 washing_2.jpg	A person washes his face in the sink
 cycling_2.jpg	A person riding a bike on a clear sky
-bus_2.jpg Someone is waiting at the bus stop
+bus_2.jpg	Someone is waiting at the bus stop
