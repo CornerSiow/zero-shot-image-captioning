@@ -101,9 +101,9 @@ class Vocabulary(object):
         return sentence
 
 
-print("Generate Vocab...")
-vocab = Vocabulary()
-print("Load training caption...")
-vocab.loadCaptions("caption_label.txt")
-print("Save Vocab...")
-vocab.saveFile("data/vocab.pickle")
+# print("Generate Vocab...")
+# vocab = Vocabulary()
+# print("Load training caption...")
+# vocab.loadCaptions("caption_label.txt")
+# print("Save Vocab...")
+# vocab.saveFile("data/vocab.pickle")
