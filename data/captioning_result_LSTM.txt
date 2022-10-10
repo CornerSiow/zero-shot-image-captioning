@@ -1,0 +1,10 @@
+working_1.jpg	a person using a laptop in the office
+eating_1.jpg	a person eats a banana in front of a laptop
+washing_1.jpg	a person washes his face in the sink
+cycling_1.jpg	a person washes his face in the sink
+bus_1.jpg	someone is waiting at the bus stop
+working_2.jpg	a person using a laptop in the office
+eating_2.jpg	a person using a laptop in the office
+washing_2.jpg	a person using a laptop in the office
+cycling_2.jpg	a person using a laptop in the office
+bus_2.jpg	a person using a laptop in the office
