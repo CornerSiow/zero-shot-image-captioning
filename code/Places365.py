@@ -152,7 +152,6 @@ class Places365:
         for name in features_names:
             model._modules.get(name).register_forward_hook(self.hook_feature)
         return model
-    
     def pred(self, file_name):
         self.features_blobs = []
         self.model.eval()
@@ -193,6 +192,48 @@ class Places365:
         
                
         return result
+    
+    def predAll(self, file_name):
+        self.features_blobs = []
+        self.model.eval()
+        # load the test image
+        img = Image.open(file_name)
+        input_img = V(self.tf(img).unsqueeze(0))
+        
+        # forward pass
+        logit = self.model.forward(input_img)
+
+        h_x = F.softmax(logit, 1).data.squeeze()
+       
+        probs, idx = h_x.sort(0, True)
+        probs = probs.numpy()
+       
+        idx = idx.numpy()
+        
+        io_image = np.mean(self.labels_IO[idx[:10]]) 
+        
+
+        catResult = {}
+        attrResult = {}
+        
+        # output the IO prediction
+        io_image = np.mean(self.labels_IO[idx[:10]]) # vote for the indoor or outdoor
+       
+        
+        # output the prediction of scene category
+        for i in range(len(probs)):      
+                catResult[self.classes[idx[i]]] = probs[i]
+        
+        # output the scene attributes
+        responses_attribute = self.W_attribute.dot(self.features_blobs[1])       
+        idx_a = np.argsort(responses_attribute)
+        
+        for i, v in enumerate(responses_attribute):
+                attrResult[self.labels_attribute[i].replace("/", " ").replace("_", " ").replace("-", " ")] = v
+                
+        
+               
+        return catResult, attrResult
     
    
 
